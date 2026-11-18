@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#210f19">
+<meta name="description" content="Una historia entre millones de universos. Nicole & Víctor.">
+<title>Canelito.exe — Nuestro universo</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--ink:#f8eee8;--muted:#c7aaa9;--wine:#5b1f39;--rose:#d88da0;--gold:#d9b879;--night:#170c13;--panel:#28131f;--line:rgba(231,190,190,.18);--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--mono:'DM Mono',monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#51243a 0%,#24121d 42%,#120a10 100%);color:var(--ink);font-family:var(--sans);line-height:1.7;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:radial-gradient(#f4cbd2 1px,transparent 1px);background-size:47px 47px;z-index:-1}
+button{font:inherit;cursor:pointer}a{color:inherit}.mono{font-family:var(--mono);letter-spacing:.04em;color:var(--rose);font-size:.78rem}.serif{font-family:var(--serif)}.wrap{width:min(1080px,calc(100% - 40px));margin:auto}.section{padding:100px 0;position:relative}.eyebrow{font:500 .75rem var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}h1,h2,h3,p{margin-top:0}h1{font:600 clamp(3rem,8vw,6.7rem)/.99 var(--serif);letter-spacing:-.045em;margin:18px 0}h2{font:600 clamp(2.25rem,5vw,4rem)/1.08 var(--serif);letter-spacing:-.025em;margin:12px 0 22px}h3{font:600 1.55rem var(--serif)}.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:#e4ccca;max-width:680px}.muted{color:var(--muted)}.btn{border:1px solid rgba(237,195,199,.35);border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#8d3e5d,#57243d);color:white;box-shadow:0 10px 35px #08030955;transition:.25s}.btn:hover{transform:translateY(-2px);box-shadow:0 14px 35px #08030988}.btn.ghost{background:transparent}.center{text-align:center}.divider{height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:32px 0}
+#intro{position:fixed;inset:0;z-index:20;background:radial-gradient(ellipse at 50% 30%,#51233a,#170c13 70%);display:grid;place-items:center;padding:24px;transition:opacity .8s,visibility .8s}#intro.done{opacity:0;visibility:hidden}.boot{width:min(560px,100%);border:1px solid #d88da044;background:#160b12dd;border-radius:18px;padding:28px;box-shadow:0 30px 100px #0008}.boot-head{display:flex;justify-content:space-between;color:#c79aa5;font: .72rem var(--mono);border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:18px}.boot-line{font: .86rem/2 var(--mono);color:#d8c0c3}.boot-line span{color:#e6b7c2}.boot-actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.hero{min-height:94vh;display:grid;place-items:center;text-align:center;padding:120px 0 90px;position:relative;isolation:isolate}.hero:before,.hero:after{content:"";position:absolute;border:1px solid #d88da02c;border-radius:50%;width:min(70vw,700px);aspect-ratio:1;z-index:-1;box-shadow:0 0 100px #a14d7130,inset 0 0 100px #a14d7117}.hero:after{width:min(52vw,510px);transform:rotate(35deg);border-radius:43% 57% 50% 50%}.webmark{font-size:2.1rem;color:var(--rose);filter:drop-shadow(0 0 18px #e78da777)}.hero .sub{font: .82rem var(--mono);letter-spacing:.12em;color:var(--gold)}.hero .lead{margin:24px auto 30px}.scrollhint{margin-top:52px;color:#b995a1;font: .7rem var(--mono);letter-spacing:.16em}
+.spark{position:absolute;color:#dba8b4;opacity:.7;animation:float 7s ease-in-out infinite}.spark:nth-child(2){left:12%;top:27%;animation-delay:-2s}.spark:nth-child(3){right:12%;top:38%;animation-delay:-4s}.spark:nth-child(4){left:20%;bottom:20%;animation-delay:-1s}@keyframes float{50%{transform:translateY(-16px) rotate(15deg);opacity:1}}
+.story-grid{display:grid;grid-template-columns:190px 1fr;gap:44px}.timeline{position:sticky;top:32px;align-self:start;border-left:1px solid #d88da055;padding:6px 0 6px 20px}.timeline a{display:block;text-decoration:none;color:#c5a5aa;font-size:.83rem;padding:9px 0;transition:.2s}.timeline a:hover{color:white}.chapter{padding:0 0 76px;scroll-margin-top:35px}.chapter-tag{font: .72rem var(--mono);color:var(--gold);letter-spacing:.1em}.chapter p{color:#e5d0ce;font-size:1.03rem;max-width:720px}.quote{border-left:2px solid var(--rose);padding:18px 24px;margin:28px 0;background:linear-gradient(90deg,#a44b681b,transparent);font:italic 1.35rem/1.5 var(--serif);color:#f3dfe0}
+.panel{background:linear-gradient(145deg,#351b2aee,#21111bee);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,38px);box-shadow:0 24px 70px #0003}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{min-height:210px;border:1px dashed #d88da066;border-radius:16px;background:linear-gradient(145deg,#5c2942,#24131f);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;position:relative;overflow:hidden}.photo input{position:absolute;inset:0;opacity:0;cursor:pointer}.photo .placeholder{pointer-events:none;color:#e3bdc7}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo .caption{position:absolute;bottom:0;left:0;right:0;background:#170c13c9;padding:8px;font-size:.8rem}
+.musicbox{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.vinyl{width:78px;height:78px;border-radius:50%;background:repeating-radial-gradient(circle,#21111b 0 4px,#3e1e30 5px 7px);display:grid;place-items:center;border:5px solid #6c344d}.vinyl:after{content:"♡";background:#d89aaa;color:#351527;border-radius:50%;width:22px;height:22px;display:grid;place-items:center}
+.quiz{max-width:700px;margin:auto}.progress{height:5px;background:#563044;border-radius:8px;overflow:hidden;margin:18px 0 26px}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--rose),var(--gold));width:0;transition:.3s}.answers{display:grid;gap:10px;margin:22px 0}.answer{padding:14px 17px;border:1px solid var(--line);border-radius:12px;text-align:left;color:var(--ink);background:#ffffff08}.answer:hover,.answer.selected{border-color:var(--rose);background:#d88da01a}.feedback{min-height:30px;color:var(--gold);font-size:.92rem}
+.envelope-wrap{display:grid;place-items:center;padding:22px}.envelope{width:min(340px,85vw);height:220px;position:relative;border:0;background:transparent;perspective:900px}.env-back{position:absolute;inset:0;background:#6d2d49;border-radius:10px;box-shadow:0 20px 50px #0005}.env-front{position:absolute;inset:0;background:linear-gradient(145deg,#a84f6d,#6b2947);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:10px}.env-flap{position:absolute;inset:0;background:#c06a82;clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top;transition:transform .8s;z-index:3}.seal{position:absolute;z-index:4;left:50%;top:58%;transform:translate(-50%,-50%);font-size:2rem}.envelope.open .env-flap{transform:rotateX(180deg)}.letter{display:none;max-width:760px;margin:30px auto 0;white-space:pre-line;color:#f0dedd;line-height:1.9}.letter.show{display:block;animation:fade .8s}@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.final{background:radial-gradient(ellipse at 50% 50%,#5c2842,#21111c 68%,transparent);text-align:center;padding:110px 20px;border-radius:28px}.heart{font-size:2.4rem;color:#e99caf;animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.18);text-shadow:0 0 24px #ef91aa}}
+footer{padding:45px 20px;text-align:center;color:#b893a0;font: .75rem var(--mono)}.terminal-toggle{position:fixed;right:18px;bottom:18px;border:1px solid #d88da055;background:#21111ddd;color:#e8bdc8;border-radius:50%;width:46px;height:46px;z-index:5}.egg{display:none;position:fixed;inset:auto 18px 76px auto;z-index:8;background:#100a0f;border:1px solid #d88da066;border-radius:14px;padding:20px;width:min(340px,calc(100% - 36px));font: .8rem/1.8 var(--mono);box-shadow:0 20px 70px #0009}.egg.show{display:block}.egg strong{color:#e4a5b6}
+@media(max-width:760px){.section{padding:72px 0}.story-grid{grid-template-columns:1fr;gap:24px}.timeline{position:relative;top:0;display:flex;overflow:auto;gap:20px;border-left:0;border-bottom:1px solid var(--line);padding:0 0 10px}.timeline a{white-space:nowrap}.gallery{grid-template-columns:repeat(2,1fr)}.photo{min-height:160px}.hero{min-height:86vh}.hero:before{width:90vw}.hero:after{width:72vw}}
+@media(max-width:430px){.wrap{width:min(100% - 28px,1080px)}.gallery{gap:9px}.photo{min-height:135px;padding:10px}.panel{border-radius:17px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+button.photo{width:100%;font:inherit;color:inherit;cursor:pointer;padding:0}
+.photo.locked{cursor:not-allowed;filter:saturate(.6);opacity:.75}
+.photo.locked .placeholder{display:block}
+.photo.new{animation:unlock 1s ease}
+@keyframes unlock{0%{transform:scale(.9);box-shadow:0 0 0 0 #d88da0aa}60%{transform:scale(1.04);box-shadow:0 0 40px 8px #d88da088}100%{transform:none;box-shadow:none}}
+#lightbox{position:fixed;inset:0;z-index:50;background:#0a050cee;display:none;place-items:center;padding:20px;cursor:zoom-out}
+#lightbox.show{display:grid;animation:fade .4s}
+#lightbox figure{margin:0;max-width:min(900px,100%);text-align:center}
+#lightbox img{max-width:100%;max-height:78vh;border-radius:14px;box-shadow:0 20px 80px #000a}
+#lightbox figcaption{margin-top:14px;font:italic 1.2rem var(--serif);color:#f3dfe0}
+#lbClose{position:absolute;top:16px;right:20px;width:44px;height:44px;border-radius:50%;border:1px solid #d88da066;background:#21111d;color:#fff;font-size:1.1rem}
+</style>
+</head>
+<body>
+<div id="intro" role="dialog" aria-label="Bienvenida a Canelito.exe">
+ <div class="boot">
+  <div class="boot-head"><span>CANELITO</span></div>
+  <div class="boot-line">&gt; iniciando una experiencia especial<span>...</span></div>
+  <div class="boot-line">&gt; compilando recuerdos<span>...</span></div>
+  <div class="boot-line">&gt; conectando dos universos<span>...</span></div>
+  <div class="boot-line">&gt; destinatario detectado: <span>CANELITO ♡</span></div>
+  <div class="boot-actions"><button class="btn" id="enter">Entrar a nuestro universo ↗</button><button class="btn ghost" id="skip">Saltar intro</button></div>
+ </div>
+</div>
+<header class="hero">
+ <span class="spark">✧</span><span class="spark">✦</span><span class="spark">✧</span><span class="spark">⋆</span>
+ <div class="wrap">
+  <div class="webmark">✳</div><div class="eyebrow">Un pequeño proyecto hecho con amor</div>
+  <h1>Una historia<br><em>entre millones</em><br>de universos.</h1>
+  <p class="sub">NICOLE & VÍCTOR &nbsp;|&nbsp; 2025 — PARA TODA LA VIDA</p>
+  <p class="lead">Hay encuentros que parecen casualidad… hasta que se convierten en tu universo favorito.</p>
+  <a class="btn" href="#historia">Explorar nuestra historia ↓</a>
+ </div>
+</header>
+
+<main>
+<section class="section" id="historia">
+ <div class="wrap">
+  <div class="eyebrow">01 / Nuestro recorrido</div><h2>Una historia con más de un capítulo.</h2>
+  <p class="lead">No somos una película perfecta. Somos dos personas reales, aprendiendo a escribir algo bonito con lo que la vida nos ha enseñado.</p>
+  <div class="story-grid">
+   <nav class="timeline" aria-label="Capítulos"><a href="#cap1">01 · El encuentro</a><a href="#cap2">02 · La pausa</a><a href="#cap3">03 · El reencuentro</a><a href="#cap4">04 · Nuestro universo</a><a href="#cap5">05 · Siguiente nivel</a></nav>
+   <div>
+    <article class="chapter" id="cap1"><div class="chapter-tag">🕷️ CAPÍTULO 01 · 2025</div><h3>Una historia entre millones de universos</h3>
+     <p>Dicen que existen millones de universos, millones de posibilidades y millones de caminos que dos personas pueden tomar. Pero, entre tantas coincidencias, el nuestro decidió cruzarse.</p>
+     <p>Lo curioso es que nuestra historia no comenzó buscando encontrarnos. En 2025, mientras intentábamos unir a otras dos personas, terminamos acercándonos nosotros. Sin saberlo, estábamos protagonizando nuestra propia historia.</p>
+     <p>Y como diría una de esas historias de Spider-Man, a veces las personas que están destinadas a encontrarse lo hacen de las maneras más inesperadas.</p>
+     <p>Al principio todo parecía sacado de una película romántica: las caminatas sin rumbo, las conversaciones que nunca queríamos terminar, las risas por cualquier tontería y esas noches en las que dormir podía esperar un poquito más.</p>
+     <p>Éramos dos personas descubriendo lo bonito que podía ser compartir la vida con alguien.</p>
+     <p>Porque no importa cuántas personas existan en el mundo, hay encuentros que se sienten como si el universo hubiera hecho algo especial para que sucedieran.</p>
+    </article>
+    <article class="chapter" id="cap2"><div class="chapter-tag">🕸️ CAPÍTULO 02 · MARZO 2026</div><h3>El capítulo que no supimos jugar</h3>
+     <p>Pero incluso los superhéroes tienen días en los que no pueden salvarlo todo.</p>
+     <p>Nuestra historia también tuvo tormentas. Llegaron las diferencias, los errores, las palabras que dolieron y situaciones que no supimos manejar de la mejor manera.</p>
+     <p>A veces quisimos tener la razón cuando necesitábamos escucharnos. A veces nos faltó paciencia cuando necesitábamos comprensión.</p>
+     <p>Y en marzo de 2026 llegó nuestra separación.</p>
+     <p>Por un momento, parecía que nuestra película había llegado a los créditos finales. Cada uno tuvo que continuar su camino, aprender a vivir sin la presencia del otro y entender que amar también implica reconocer lo que debemos cambiar.</p>
+     <p>Pero hay algo curioso de las historias que realmente importan: no siempre terminan cuando aparece la pantalla negra.</p>
+    </article>
+    <article class="chapter" id="cap3"><div class="chapter-tag">❤️‍🩹 CAPÍTULO 03 · AGOSTO 2026</div><h3>Cinco meses después: volver a encontrarnos</h3>
+     <p>En agosto de 2026, nuestros caminos volvieron a cruzarse.</p>
+     <p>Después de cinco meses separados, decidimos darnos otra oportunidad.</p>
+     <p>No volvimos a una historia idéntica a la anterior. Volvimos con recuerdos, aprendizajes, errores reconocidos y muchas cosas por mejorar.</p>
+     <p>Y aunque desde entonces hemos tenido problemas, también hemos demostrado que podemos enfrentarlos, superarlos y seguir construyendo algo juntos.</p>
+     <p>Quizás esa sea la parte más bonita de nuestra historia: entender que el amor no consiste en nunca tener problemas, sino en aprender a atravesarlos sin olvidar por qué decidimos estar juntos.</p>
+     <div class="quote">«A veces, las personas que amas son las que te enseñan a ser más fuerte, incluso cuando la vida te obliga a estar lejos de ellas».</div>
+    </article>
+    <article class="chapter" id="cap4"><div class="chapter-tag">🕷️ CAPÍTULO 04 · ESTE UNIVERSO</div><h3>Mi universo favorito eres tú</h3>
+     <p>Si existieran millones de universos, probablemente en muchos de ellos nuestras historias serían diferentes.</p>
+     <p>Quizás en alguno nunca nos habríamos conocido. En otro habríamos sido simples desconocidos. En alguno habríamos seguido caminos completamente distintos.</p>
+     <p>Pero en este universo nos encontramos.</p>
+     <p>Y si algo quiero que sepas es que no espero que seamos Peter Parker y MJ, ni que tengamos una historia sin dificultades.</p>
+     <p>Quiero que seamos Nicole y Víctor. Con nuestras diferencias, nuestras bromas, nuestras aventuras, nuestros errores y nuestras ganas de seguir adelante.</p>
+     <p>No quiero soltarte cuando las cosas se compliquen. Quiero que aprendamos a tomarnos de la mano incluso cuando no sepamos exactamente qué viene después.</p>
+     <p>Porque si algo me han enseñado nuestras dos partidas es que no quiero una historia en la que nunca nos perdamos; quiero una en la que, incluso después de perdernos, sepamos encontrarnos.</p>
+    </article>
+    <article class="chapter" id="cap5"><div class="chapter-tag">💌 CAPÍTULO 05 · SIGUIENTE NIVEL</div><h3>Una promesa para el siguiente nivel</h3>
+     <p>Mi Canelito:</p>
+     <p>No puedo prometerte que nunca discutiremos, que siempre tendremos las palabras correctas o que todos nuestros días serán bonitos.</p>
+     <p>Pero sí quiero prometerte que voy a seguir aprendiendo a amarte mejor.</p>
+     <p>Quiero seguir descubriendo lugares contigo, escuchando tus historias, riéndome de tus ocurrencias y creando recuerdos que algún día nos hagan mirar atrás y sonreír.</p>
+     <p>Si alguna vez la vida nos pone otra tormenta, quiero que recordemos que ya hemos atravesado una separación, que nos volvimos a encontrar y que todavía tenemos mucho por construir.</p>
+     <p>No necesito millones de universos para encontrar mi historia favorita.</p>
+     <p>Me basta con este, si en él puedo seguir encontrándote a ti.</p>
+     <p>Y si tuviera que volver a empezar el juego, volvería a elegir la opción que me llevó hasta ti.</p>
+     <p>No porque nuestra historia sea perfecta, sino porque es nuestra.</p>
+     <p><strong>Te amo millones. Y esta vez quiero que juguemos todos los niveles juntos. ❤️</strong></p>
+    </article>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="recuerdos">
+ <div class="wrap">
+  <div class="eyebrow">02 / Archivo de recuerdos</div><h2>Pequeños instantes,<br><em>nuestro universo entero.</em></h2>
+  <p class="lead">Cada recuerdo se desbloquea cuando termines de mirar el anterior. Toca el primero para empezar.</p>
+  <div class="gallery" id="gallery"></div>
+  <p class="muted" id="galleryHint" style="font-size:.82rem;margin-top:14px"></p>
+ </div>
+</section>
+
+<section class="section" id="cancion">
+ <div class="wrap">
+  <div class="panel">
+   <div class="eyebrow">03 / Nuestra banda sonora</div><h2>Hay canciones que guardan universos.</h2>
+   <div class="musicbox"><div class="vinyl" aria-hidden="true"></div><div><h3 style="margin-bottom:4px">Nuestra canción</h3><p class="muted" style="margin:0">Un espacio reservado para esa melodía que nos recuerda a nosotros.</p></div></div>
+   <div class="divider"></div>
+    <input id="audioFile" type="file" accept="audio/*" style="display:none">   
+    <audio id="audio" controls src="assets/cancion.mp3" style="width:100%"></audio>
+  <p class="muted" id="audioHint" style="font-size:.82rem;margin:0">Pulsa reproducir para escuchar nuestra canción.</p>  
+    </div>
+ </div>
+</section>
+
+<section class="section" id="juego">
+ <div class="wrap">
+  <div class="eyebrow center">04 / Mini juego</div><h2 class="center">¿Cuánto conoces<br><em>nuestro universo?</em></h2>
+  <p class="center muted">Cinco preguntas. Un pequeño viaje por nuestra historia.</p>
+  <div class="panel quiz">
+   <div class="mono" id="qCount">NIVEL 01 / 05</div><div class="progress"><span id="progress"></span></div>
+   <h3 id="question">Preparado, Canelito?</h3><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div>
+   <button class="btn" id="next" disabled>Siguiente pregunta →</button>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="carta">
+ <div class="wrap center">
+  <div class="eyebrow">05 / Mensaje desbloqueado</div><h2>Hay algo que quiero<br><em>decirte de cerca.</em></h2>
+  <p class="muted">Toca el sobre. Esta parte no se compila: se siente.</p>
+  <div class="envelope-wrap"><button class="envelope" id="envelope" aria-label="Abrir carta"><span class="env-back"></span><span class="env-front"></span><span class="env-flap"></span><span class="seal">♡</span></button></div>
+  <div class="letter panel" id="letter">
+   <h2 class="center">Mi Canelito</h2>
+   <p>No puedo prometerte que nunca discutiremos, que siempre tendremos las palabras correctas o que todos nuestros días serán bonitos.</p>
+   <p>Pero sí quiero prometerte que voy a seguir aprendiendo a amarte mejor.</p>
+   <p>Quiero seguir descubriendo lugares contigo, escuchando tus historias, riéndome de tus ocurrencias y creando recuerdos que algún día nos hagan mirar atrás y sonreír.</p>
+   <p>Si alguna vez la vida nos pone otra tormenta, quiero que recordemos que ya hemos atravesado una separación, que nos volvimos a encontrar y que todavía tenemos mucho por construir.</p>
+   <p>No necesito millones de universos para encontrar mi historia favorita.</p>
+   <p>Me basta con este, si en él puedo seguir encontrándote a ti.</p>
+   <p>Y si tuviera que volver a empezar el juego, volvería a elegir la opción que me llevó hasta ti.</p>
+   <p>No porque nuestra historia sea perfecta, sino porque es nuestra.</p>
+   <p><strong>Te amo millones. Y esta vez quiero que juguemos todos los niveles juntos. ❤️</strong></p>
+   <p class="center serif" style="font-size:1.5rem">Con amor, Nicole.</p>
+  </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="wrap"><div class="final">
+  <div class="heart">♡</div><div class="eyebrow">ÚLTIMA MISIÓN · EN CURSO</div>
+  <h2>El siguiente nivel<br><em>lo escribimos juntos.</em></h2>
+  <p class="lead" style="margin:0 auto 28px">No necesito millones de universos para encontrar mi historia favorita. Me basta con este, si en él puedo seguir encontrándote a ti.</p>
+  <div class="serif" style="font-size:1.45rem;color:#edc7cf">Nicole & Víctor · 2025 — para siempre</div>
+  <div style="margin-top:28px"><button class="btn" id="stars">Enviar un poquito de estrellas ✨</button></div>
+ </div></div>
+</section>
+</main>
+
+<script>
+const intro=document.getElementById('intro');
+const audio=document.getElementById('audio');
+function closeIntro(){intro.classList.add('done');audio.play().catch(()=>{});}
+document.getElementById('enter').addEventListener('click',closeIntro);
+document.getElementById('skip').addEventListener('click',closeIntro);
+
+/* GALERÍA */
+const gallery=document.getElementById('gallery');
+const captions=['Nuestro primer recuerdo','Un día cualquiera','Una aventura juntos','Una de nuestras risas','Un lugar especial','Mi foto favorita'];
+const fotos=['assets/Nuestro primer dia.jpg','assets/foto dos.jpg','assets/aventura.jpg','assets/foto cuatro.jpg','assets/foto cinco.jpg','assets/foto seis.png'];
+let unlocked=1;
+try{unlocked=Math.min(captions.length,Math.max(1,parseInt(localStorage.getItem('unlocked'))||1));}catch(e){}
+const galleryHint=document.getElementById('galleryHint');
+const lb=document.createElement('div');
+lb.id='lightbox';
+lb.innerHTML='<button id="lbClose" aria-label="Cerrar">✕</button><figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>';
+document.body.appendChild(lb);
+const lbImg=document.getElementById('lbImg'),lbCap=document.getElementById('lbCap');
+let viewing=-1;
+function renderGallery(newIndex){
+  gallery.innerHTML='';
+  captions.forEach((caption,i)=>{
+    const card=document.createElement('button');
+    card.type='button';
+    card.className='photo'+(i<unlocked?'':' locked')+(i===newIndex?' new':'');
+    const num=String(i+1).padStart(2,'0');
+    if(i<unlocked){
+      card.innerHTML=`<span class="placeholder"><span style="font-size:1.7rem">♡</span><br><strong>Recuerdo ${num}</strong><br><small>${caption}</small></span><img src="${fotos[i]}" alt="${caption}"><span class="caption">${caption}</span>`;
+      card.querySelector('img').onerror=function(){this.remove();};
+      card.addEventListener('click',()=>openLb(i));
+    }else{
+      card.innerHTML=`<span class="placeholder"><span style="font-size:1.7rem">🔒</span><br><strong>Recuerdo ${num}</strong><br><small class="mono">Mira el anterior para desbloquear</small></span>`;
+      card.setAttribute('aria-disabled','true');
+    }
+    gallery.appendChild(card);
+  });
+  galleryHint.textContent=unlocked<captions.length?`${unlocked} de ${captions.length} recuerdos desbloqueados`:'Todos los recuerdos desbloqueados ♡';
+}
+function openLb(i){viewing=i;lbImg.src=fotos[i];lbImg.alt=captions[i];lbCap.textContent=captions[i];lb.classList.add('show');}
+function closeLb(){
+  if(!lb.classList.contains('show'))return;
+  lb.classList.remove('show');
+  if(viewing===unlocked-1&&unlocked<captions.length){
+    unlocked++;
+    try{localStorage.setItem('unlocked',unlocked);}catch(e){}
+    renderGallery(unlocked-1);
+  }
+  viewing=-1;
+}
+lb.addEventListener('click',closeLb);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+renderGallery(-1);
+
+/* AUDIO */
+audio.src='assets/cancion.mp3';
+
+/* QUIZ */
+const questions=[
+ {q:'¿En qué año comenzó nuestra historia?',a:['2024','2025','2026'],c:1,why:'En 2025, cuando intentábamos unir a otras dos personas… y terminamos encontrándonos nosotros.'},
+ {q:'¿Qué hacíamos al principio que se volvió tan especial?',a:['Caminatas sin rumbo y conversaciones largas','Competencias de cocina','Maratones de películas de terror'],c:0,why:'Las caminatas sin rumbo y las conversaciones que no queríamos terminar.'},
+ {q:'¿En qué mes llegó nuestra separación?',a:['Enero de 2026','Marzo de 2026','Junio de 2026'],c:1,why:'Marzo de 2026 fue una pausa importante en nuestra historia.'},
+ {q:'¿Cuándo volvimos a encontrarnos?',a:['Agosto de 2026','Octubre de 2026','Diciembre de 2025'],c:0,why:'En agosto de 2026, después de cinco meses separados.'},
+ {q:'¿Qué queremos seguir construyendo?',a:['Una historia perfecta sin diferencias','Una historia real, con respeto, aprendizajes y amor','Un universo sin conversaciones'],c:1,why:'Una historia nuestra: imperfecta, honesta y construida entre los dos.'}
+];
+let qi=0,score=0,answered=false;
+const qEl=document.getElementById('question'),aEl=document.getElementById('answers'),fb=document.getElementById('feedback'),next=document.getElementById('next'),prog=document.getElementById('progress'),count=document.getElementById('qCount');
+function renderQ(){answered=false;const q=questions[qi];count.textContent=`NIVEL ${String(qi+1).padStart(2,'0')} / 05`;prog.style.width=`${qi/questions.length*100}%`;qEl.textContent=q.q;fb.textContent='';next.disabled=true;next.textContent='Elige una respuesta ↑';aEl.innerHTML='';q.a.forEach((v,i)=>{const b=document.createElement('button');b.className='answer';b.textContent=v;b.addEventListener('click',()=>choose(i,b));aEl.appendChild(b);});}
+function choose(i,b){if(answered)return;answered=true;const q=questions[qi];[...aEl.children].forEach(x=>x.disabled=true);if(i===q.c){score++;b.classList.add('selected');fb.textContent='¡Correcto! '+q.why;}else{b.style.borderColor='#bd7184';fb.textContent='Casi… ♡ '+q.why;}next.textContent=qi===questions.length-1?'Ver resultado ✨':'Siguiente pregunta →';next.disabled=false;}
+next.addEventListener('click',()=>{if(!answered)return;qi++;if(qi<questions.length){renderQ();return;}prog.style.width='100%';count.textContent='MISIÓN COMPLETADA';qEl.textContent=`¡Universo desbloqueado! ${score} / 5`;aEl.innerHTML='';fb.textContent=score===5?'Conoces cada capítulo. ¡Nivel experto, Canelito!':'Cada recuerdo cuenta. Lo bonito es que todavía quedan muchos capítulos por vivir.';next.textContent='Volver a jugar ↻';next.disabled=false;next.onclick=()=>{qi=0;score=0;next.onclick=null;renderQ();};});
+renderQ();
+
+/* SOBRE */
+const envelope=document.getElementById('envelope'),letter=document.getElementById('letter');
+envelope.addEventListener('click',()=>{envelope.classList.toggle('open');letter.classList.toggle('show');if(letter.classList.contains('show'))letter.scrollIntoView({behavior:'smooth',block:'center'});});
+
+/* ESTRELLAS */
+document.getElementById('stars').addEventListener('click',()=>{for(let i=0;i<34;i++){const s=document.createElement('span');s.textContent=['✦','✧','♡','⋆'][i%4];s.style.cssText=`position:fixed;z-index:30;left:${Math.random()*100}vw;top:${Math.random()*100}vh;color:${i%2?'#e8b5c1':'#e2c58b'};font-size:${12+Math.random()*22}px;pointer-events:none;transition:transform 1.5s ease,opacity 1.5s ease`;document.body.appendChild(s);requestAnimationFrame(()=>{s.style.transform=`translateY(-${70+Math.random()*180}px) rotate(${Math.random()*150}deg)`;s.style.opacity='0';});setTimeout(()=>s.remove(),1700);}});
+</script>
+</body>
+</html>
